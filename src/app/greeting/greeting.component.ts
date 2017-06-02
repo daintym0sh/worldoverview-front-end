@@ -4,7 +4,6 @@ import { CountryDataService } from 'app/country-data.service'
 @Component({
   selector: 'greeting',
   templateUrl: './greeting.component.html', providers: [CountryDataService],
-  styleUrls: ['./greeting.component.css']
 })
 export class GreetingComponent implements OnInit {
 

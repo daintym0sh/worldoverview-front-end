@@ -8,7 +8,7 @@ export class CountryDataService {
   constructor(private http: Http) { }
 
 	getGreeting(){
-		return this.http.get('/greeting/')
+		return this.http.get('https://jsonplaceholder.typicode.com/albums')  // '/greeting/'
 					.map(res => res.json());
 	}
 }
