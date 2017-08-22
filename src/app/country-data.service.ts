@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -7,8 +7,8 @@ export class CountryDataService {
 
   constructor(private http: Http) { }
 
-	getGreeting(){
-		return this.http.get('https://jsonplaceholder.typicode.com/albums')  // '/greeting/'
-					.map(res => res.json());
+	getCountries(){
+		return this.http.get('http://api.geonames.org/countryInfoJSON?formatted=true&username=jmeier&style=full')  // '/greeting/'
+					.map(getResponse => getResponse.json());
 	}
 }

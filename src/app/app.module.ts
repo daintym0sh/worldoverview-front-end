@@ -1,21 +1,24 @@
+import { AgmCoreModule } from '@agm/core';
+import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdSelectModule} from '@angular/material';
-import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { GreetingComponent } from './greeting/greeting.component';
-import { CountryListComponent } from './country-list/country-list.component';
+import { MapComponent } from './map/map.component';
+import { MdSelectModule } from '@angular/material';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GreetingComponent,
-    CountryListComponent
+    MapComponent
   ],
   imports: [
+      AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCk5LN6UZWnnl8vQxd1LP_HIIgj7Izje9U'
+    }),
     BrowserModule,
     BrowserAnimationsModule,
     MdSelectModule, 
