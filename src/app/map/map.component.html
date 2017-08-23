@@ -1,0 +1,12 @@
+<p>
+	<md-select placeholder="Country" [(ngModel)]="currentCountry" (change)="change($event)">
+		<md-option *ngFor="let myCountry of countryList" [value]="myCountry" >{{myCountry.name}}</md-option>
+	</md-select>
+	<agm-map [fitBounds]="latlngBounds">
+  		<agm-marker [latitude]="currentCountry.getLat()" [longitude]="currentCountry.getLon()">
+  		</agm-marker>
+	</agm-map>
+
+</p>
+
+
