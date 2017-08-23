@@ -1,10 +1,10 @@
 export class Country {
 
-	private name: string
-	private north: number
-	private south: number	
-	private east: number
-	private west: number
+	name: string
+	north: number
+	south: number	
+	east: number
+	west: number
 
 	constructor(name: string, north: number, south: number, east: number, west: number){
 		this.name = name
@@ -12,6 +12,22 @@ export class Country {
 		this.south = south
 		this.east = east
 		this.west = west
+	}
+
+	getNorth(): number{
+		return this.north
+	}
+
+	getSouth(): number{
+		return this.south
+	}
+
+	getEast(): number{
+		return this.east
+	}
+
+	getWest(): number{
+		return this.west
 	}
 
 	getLat(): number{
